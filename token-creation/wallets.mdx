@@ -1,0 +1,220 @@
+---
+title: Managing Wallets
+description: Set up and manage wallets for token deployment
+---
+
+The first step to deploying tokens is having a wallet. Neptureon currently supports **Solana** and **BSC (Binance Smart Chain)**.
+
+## Getting Started with Wallets
+
+### Solana Wallet
+
+The most popular Solana wallet is **Phantom**. We recommend starting with Phantom if you don't already have a Solana wallet.
+
+**Download Phantom:** [https://phantom.com/](https://phantom.com/)
+
+Phantom is available as:
+- Browser extension (Chrome, Firefox, Brave, Edge)
+- Mobile app (iOS and Android)
+
+Follow Phantom's setup instructions to create your wallet and securely save your recovery phrase. Once set up, you'll need to add some SOL to cover gas fees for token deployments.
+
+### BSC Wallet
+
+We recommend using **MetaMask** for BSC:
+
+**MetaMask:** [https://metamask.io/](https://metamask.io/)
+
+MetaMask is available as:
+- Browser extension (Chrome, Firefox, Brave, Edge)
+- Mobile app (iOS and Android)
+
+Follow MetaMask's setup instructions to create your wallet and securely save your recovery phrase.
+
+**BSC Network:**
+
+BSC typically comes by default in MetaMask. If you don't see it in your network list, you can add it manually:
+
+- **Network Name:** Binance Smart Chain
+- **RPC URL:** https://bsc-dataseed.binance.org/
+- **Chain ID:** 56
+- **Currency Symbol:** BNB
+- **Block Explorer:** https://bscscan.com
+
+Once set up, you'll need to add some BNB to cover gas fees for token deployments.
+
+## Managing Wallets on Neptureon
+
+Navigate to the **Wallets** page to manage your wallets for token deployment.
+
+### Wallet Views
+
+The Wallets page has two views: **Solana** and **Binance**.
+
+- **Solana View:** Displays all your Solana wallets
+- **Binance View:** Displays all your Binance Smart Chain (BSC) wallets
+
+Switch between views to see wallets for each blockchain. Only wallets for the selected blockchain will be displayed.
+
+### Search and Sort
+
+**Search Bar:**
+Use the search bar to quickly find specific wallets by name or address.
+
+**Sort Options:**
+You can sort your wallets by various values:
+- **Balance** - Sort by wallet balance (high to low or low to high)
+- **Created Date** - Sort by when the wallet was created
+- **Name** - Sort alphabetically by wallet name
+- **Type** - Sort by wallet type (Deployer, Bundler, Sniper)
+
+### Creating a Wallet
+
+To create a new wallet on Neptureon:
+
+1. Click the **Create Wallet** button
+2. Set the **Wallet Name** (e.g., "Main Deployer", "Trading Wallet")
+3. Select the **Blockchain** (Solana or BSC)
+4. Click **Create**
+
+Your wallet will be generated instantly and secured by **Turnkey**, an industry-leading secure wallet infrastructure provider.
+
+### Importing a Wallet
+
+To import an existing wallet:
+
+1. Click the **Import Wallet** button
+2. Set the **Wallet Name**
+3. Select the **Blockchain** (Solana or BSC)
+4. Input your **Private Key**
+5. Click **Import**
+
+**Getting Your Private Key:**
+
+**From Phantom (Solana):**
+- Open Phantom
+- Go to Settings
+- Click Manage Accounts
+- Click the account you want to export
+- Click Show Private Key
+- Enter your password
+- Choose the chain (Solana)
+- Copy your private key
+
+**From MetaMask:**
+- Click the account name at the top
+- Click the three dots next to the account you want to export
+- Click Account Details
+- Click Show Private Key
+- Enter your password to reveal
+- Choose BNB Chain
+- Copy your private key
+
+## Wallet Types
+
+Neptureon uses different wallet types for different purposes. Understanding these types helps you organize your deployment and trading strategy.
+
+### Deployer
+
+**Deployer** wallets are your primary wallet for token deployments.
+
+- **Purpose:** Used to deploy new tokens to the blockchain
+- **Requirements:** Should have sufficient SOL / BNB for deployment fees
+- **Limitation:** Only one deployer wallet can be set at a time
+
+### Bundler
+
+**Bundler** wallets are used for bundled transactions.
+
+- **Purpose:** Enables MEV-protected transaction bundles
+- **Use Case:** Ideal for coordinated trading strategies
+- **Limitation:** Can have multiple bundler wallets
+
+### Sniper
+
+**Sniper** wallets are used for buying tokens after bundles complete.
+
+- **Purpose:** General-purpose trading wallet
+- **Use Case:** Used for all non-deployment and non-bundling functions
+- **Limitation:** Can have multiple sniper wallets
+
+### Default Wallet Type
+
+When you add or create your first wallet (or when you have no wallets), it will automatically be set as a **Deployer** wallet.
+
+Once there is a Deployer wallet set, all subsequent wallets you create or import will default to **Sniper** type.
+
+You can change the wallet type at any time through the wallet settings.
+
+## Wallet Settings
+
+Click the **Actions** button on any wallet to access its settings:
+
+### Rename Wallet
+
+Change the name of your wallet to better organize your wallets (e.g., "Main Deployer", "Sniper 1", "Bundle Wallet").
+
+### Change Wallet Type
+
+Change the wallet type between Deployer, Bundler, or Sniper.
+
+**Important:** Only one wallet can be set as a Deployer at a time. If you change another wallet to Deployer, the previous Deployer wallet will automatically be changed to Sniper.
+
+### Delay (Sniper Wallets Only)
+
+For **Sniper** wallets, the delay setting represents the time between the token deployment and buying, measured in **milliseconds**.
+
+For example:
+- **0ms** - Buy immediately after deployment
+- **1000ms** - Wait 1 second after deployment before buying
+- **5000ms** - Wait 5 seconds after deployment before buying
+
+This allows you to control when your sniper wallets enter after a token is deployed.
+
+### Buy Amount
+
+The **Buy Amount** setting controls how much currency (SOL or BNB) the wallet will use for purchases. The meaning changes based on wallet type:
+
+- **Deployer:** The default amount it will buy when launching the token
+- **Bundler:** The amount that it will buy for the bundle
+- **Sniper:** The amount it will buy when sniping
+
+For example:
+- **0.1 SOL** - Wallet will buy with 0.1 SOL
+- **0.05 BNB** - Wallet will buy with 0.05 BNB
+
+### Export Private Key
+
+You can export the private key of any wallet created or imported on Neptureon:
+
+1. Click the **Actions** button on your wallet
+2. Select **Export Private Key**
+3. Your private key will be displayed
+4. Save it securely if you want to import this wallet into Phantom, MetaMask, or other wallet applications
+
+## Wallet Security with Turnkey
+
+Wallets created on Neptureon are secured by **Turnkey**, an industry-leading secure wallet infrastructure provider. Turnkey provides:
+
+- **Enterprise-grade encryption** for private keys
+- **Secure key storage** using advanced cryptography
+- **Non-custodial architecture** - you maintain full control
+- **Industry best practices** for wallet security
+
+Whether you create a wallet on Neptureon or import your own, you maintain full control of your private keys and can export them anytime.
+
+## Security Best Practices
+
+### Do's
+- **Use separate wallets** for token deployment vs. long-term holdings
+- **Keep only what you need** in deployment wallets
+- **Save your recovery phrases** securely offline
+
+### Don'ts
+- **Never share** your private keys with anyone
+- **Don't store large amounts** in deployment wallets
+- **Don't import** wallets containing significant funds unless necessary
+
+## Next Steps
+
+Once your wallets are set up and configured, you're ready to activate Deployer Mode. Continue to the next section to learn how to enable Deployer Mode and start deploying tokens.

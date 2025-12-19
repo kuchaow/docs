@@ -1,68 +1,62 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Neptureon",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00D3F2",
+    "light": "#34e1f7",
+    "dark": "#00b8d9"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "fonts": {
+    "heading": {
+      "family": "Manrope",
+      "source": "/fonts/Manrope-Bold.woff2",
+      "format": "woff2",
+      "weight": 700
+    },
+    "body": {
+      "family": "Manrope",
+      "source": "/fonts/Manrope-Regular.woff2",
+      "format": "woff2",
+      "weight": 400
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "getting-started/sign-up",
+              "getting-started/explore-main-feed",
+              "getting-started/customize-trackers",
+              "getting-started/history"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Token Creation",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "token-creation/introduction",
+              "token-creation/wallets",
+              "token-creation/deployer-mode",
+              "token-creation/deploy-panel"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Resources",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "brand-resources"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Legal",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "terms-of-service",
+              "privacy-policy"
             ]
           }
         ]
@@ -71,52 +65,49 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Discord",
+          "href": "https://discord.gg/neptureon",
+          "icon": "discord"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Twitter",
+          "href": "https://twitter.com/neptureon",
+          "icon": "x-twitter"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/fullLogo.svg",
+    "dark": "/logo/fullLogo.svg",
+    "height": 40
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "App",
+        "href": "https://neptureon.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Launch Neptureon",
+      "href": "https://neptureon.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/neptureon",
+      "discord": "https://discord.gg/neptureon"
     }
+  },
+  "background": {
+    "style": "gradient",
+    "color": {
+      "dark": "#050810"
+    }
+  },
+  "modeToggle": {
+    "default": "dark"
   }
 }
